@@ -432,7 +432,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969327902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -450,11 +450,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Segment: {fileID: 114201289073384910, guid: ae7b599c496355747aa86f6bd0977814, type: 2}
-  SegmentPoolSize: 4
+  SegmentPoolSize: 30
   Camera: {fileID: 921090182}
-  CameraWidth: 10
-  mStartIndex: -1
-  mEndVisibleIndex: 1
+  CameraWidth: 25
 --- !u!1001 &969478759
 Prefab:
   m_ObjectHideFlags: 0
@@ -528,7 +526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1077524520
 Transform:
   m_ObjectHideFlags: 0
@@ -868,7 +866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1580573680
 Transform:
   m_ObjectHideFlags: 0

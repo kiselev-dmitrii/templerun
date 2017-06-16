@@ -79,10 +79,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Obstacle.cs" />
-    <Compile Include="Assets\Scripts\PathRenderer.cs" />
-    <Compile Include="Assets\Scripts\PathSegment.cs" />
-    <Compile Include="Assets\Scripts\Pool.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\Hero.cs" />
+    <Compile Include="Assets\Scripts\HeroTouchController.cs" />
+    <Compile Include="Assets\Scripts\Path\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\Path\PathRenderer.cs" />
+    <Compile Include="Assets\Scripts\Path\PathSegment.cs" />
+    <Compile Include="Assets\Scripts\Path\Pool.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
