@@ -80,8 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\Hero.cs" />
-    <Compile Include="Assets\Scripts\HeroTouchController.cs" />
     <Compile Include="Assets\Scripts\Path\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Path\PathRenderer.cs" />
     <Compile Include="Assets\Scripts\Path\PathSegment.cs" />
