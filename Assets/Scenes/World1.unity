@@ -138,6 +138,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 921090181}
+  - {fileID: 1580573680}
+  - {fileID: 1077524520}
   m_Father: {fileID: 1416379895}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -380,9 +382,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Segment: {fileID: 114579559585977284, guid: ae7b599c496355747aa86f6bd0977814, type: 2}
-  SegmentPoolSize: 30
+  PoolSize: 25
   Camera: {fileID: 921090182}
   CameraWidth: 25
+  Obstacles:
+  - {fileID: 114688108578006470, guid: 3eb668cb5bfabe54995f4a8c52749b71, type: 2}
+  - {fileID: 114506534928660648, guid: 06a2ac6680d9d074ca30d8b7d089ccf2, type: 2}
+  - {fileID: 114369490864985958, guid: b2df945d80415064fb8fab9d86a07ca4, type: 2}
+  - {fileID: 114397733149466404, guid: c68ff9d9fb2945d49910216ed55a9b40, type: 2}
+  - {fileID: 114564209861092098, guid: 95d7de2f5701a3341b1ac5509163ec91, type: 2}
+  - {fileID: 114275544625036110, guid: d00d05020d95f704397bb39f3b1c47e4, type: 2}
+  - {fileID: 114359052727595386, guid: 2bc3ee70cd3ea7b4b91c00ece1aa9661, type: 2}
+  - {fileID: 114193953216892466, guid: 90aa8f7a23c23914a9eddd4f95261862, type: 2}
+  ObstacleDistance:
+    Min: 5
+    Max: 10
 --- !u!1 &1077524519
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,18 +412,18 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1077524520
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1077524519}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.000015258789, y: -37.7, z: 165.45001}
-  m_LocalScale: {x: 40.000042, y: 40, z: 40.000046}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -165.50003, y: -40.775, z: 4}
+  m_LocalScale: {x: 40.00005, y: 40, z: 40.000053}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 450796371}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!212 &1077524521
@@ -663,9 +677,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controller: {fileID: 450796372}
-  JumpVelocity: {x: 0, y: 8, z: 0}
-  Gravity: {x: 0, y: -9.8, z: 0}
-  Acceleration: {x: 0.1, y: 0, z: 0}
+  JumpVelocity: {x: 0, y: 25, z: 0}
+  Gravity: {x: 0, y: -100, z: 0}
+  Acceleration: {x: 0.4, y: 0, z: 0}
   Velocity: {x: 0, y: 0, z: 0}
 --- !u!4 &1416379895
 Transform:
@@ -681,7 +695,7 @@ Transform:
   - {fileID: 1728734687}
   - {fileID: 969327903}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538239213
 GameObject:
@@ -728,18 +742,18 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1580573680
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1580573679}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.7000153, y: -42.2, z: 174.45001}
-  m_LocalScale: {x: 40.000046, y: 40, z: 40.000046}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -174.50003, y: -45.275, z: 4.699997}
+  m_LocalScale: {x: 40.000053, y: 40, z: 40.000053}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 450796371}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!212 &1580573681
