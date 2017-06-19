@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.Assertions;
 
-namespace TempleRun.Assets.Scripts.Utils {
+namespace TempleRun.Utils {
     public class WeightedRandom<T> {
         private readonly T[] items;
         private readonly float[] weights;

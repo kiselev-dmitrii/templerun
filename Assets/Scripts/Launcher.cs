@@ -1,8 +1,8 @@
-﻿using TempleRun.Assets.Scripts.Model;
-using TempleRun.Assets.Scripts.ViewModel;
+﻿using TempleRun.Model;
+using TempleRun.ViewModel;
 using UnityEngine;
 
-namespace TempleRun.Assets.Scripts {
+namespace TempleRun {
     public class Launcher : MonoBehaviour {
         public RootContext DataContext;
         public ApplicationModel Model { get; private set; }

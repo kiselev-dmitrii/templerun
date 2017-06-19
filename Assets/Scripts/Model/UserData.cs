@@ -1,6 +1,6 @@
 ﻿using EZData;
 
-namespace TempleRun.Assets.Scripts.Model {
+namespace TempleRun.Model {
     public class UserData : Context {
         #region Collection Heroes
         private readonly Collection<HeroData> _privateHeroes = new Collection<HeroData>(false);

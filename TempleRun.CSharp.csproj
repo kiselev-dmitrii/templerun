@@ -13,8 +13,7 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
@@ -98,23 +97,30 @@
     <Compile Include="Assets\Packages\NData\Utils\ReflectionUtils.cs" />
     <Compile Include="Assets\Packages\NData\Utils\Utils.cs" />
     <Compile Include="Assets\Scripts\Game\GameController.cs" />
+    <Compile Include="Assets\Scripts\Game\HeroDef.cs" />
     <Compile Include="Assets\Scripts\Game\PathGenerator\PathGenerator.cs" />
     <Compile Include="Assets\Scripts\Game\PathGenerator\PathObstacle.cs" />
     <Compile Include="Assets\Scripts\Game\PathGenerator\PathSegment.cs" />
+    <Compile Include="Assets\Scripts\Game\TileBackground.cs" />
+    <Compile Include="Assets\Scripts\Game\WorldDef.cs" />
     <Compile Include="Assets\Scripts\Launcher.cs" />
     <Compile Include="Assets\Scripts\Model\ApplicationModel.cs" />
     <Compile Include="Assets\Scripts\Model\HeroData.cs" />
     <Compile Include="Assets\Scripts\Model\UserData.cs" />
     <Compile Include="Assets\Scripts\Utils\AutoRotate.cs" />
+    <Compile Include="Assets\Scripts\Utils\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Utils\IntRange.cs" />
     <Compile Include="Assets\Scripts\Utils\Pool.cs" />
     <Compile Include="Assets\Scripts\Utils\TransformUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\WeightedRandom.cs" />
     <Compile Include="Assets\Scripts\View\BoolActiveBinding.cs" />
     <Compile Include="Assets\Scripts\View\ClickBinding.cs" />
-    <Compile Include="Assets\Scripts\ViewModel\MainScreen.cs" />
     <Compile Include="Assets\Scripts\View\StringPrefabBinding.cs" />
     <Compile Include="Assets\Scripts\View\StringTextBinding.cs" />
+    <Compile Include="Assets\Scripts\ViewModel\MainScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shaders\TileBackground.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

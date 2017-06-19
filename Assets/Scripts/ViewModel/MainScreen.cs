@@ -1,7 +1,7 @@
 ﻿using EZData;
-using TempleRun.Assets.Scripts.Model;
+using TempleRun.Model;
 
-namespace TempleRun.Assets.Scripts.ViewModel {
+namespace TempleRun.ViewModel {
     public enum ScreenState {
         HeroScreen = 1,
         WorldScreen = 2

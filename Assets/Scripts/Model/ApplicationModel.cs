@@ -1,6 +1,6 @@
 ﻿using EZData;
 
-namespace TempleRun.Assets.Scripts.Model {
+namespace TempleRun.Model {
     public class ApplicationModel : EZData.Context {
         public static ApplicationModel Instance { get; private set; }
 

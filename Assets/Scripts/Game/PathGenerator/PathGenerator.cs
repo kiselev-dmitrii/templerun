@@ -1,34 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using TempleRun.Assets.Scripts.Utils;
+using TempleRun.Utils;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace TempleRun.Assets.Scripts.Game.PathGenerator {
-    public class PathRenderer : MonoBehaviour {
+namespace TempleRun.Game.PathGenerator {
+    public class PathGenerator : MonoBehaviour {
         public class PathSegmentPool : Pool<PathSegment> {}
-        public class ObstaclePool : Pool<Obstacle> { }
+        public class ObstaclePool : Pool<PathObstacle> { }
 
         public PathSegment Segment;
-        public int PoolSize;
+        public int SegmentPoolSize;
+        public PathObstacle[] Obstacles;
+        public int ObstaclePoolSize;
+        public IntRange ObstacleDistance = new IntRange(10, 20);
         public Camera Camera;
         public float CameraWidth;
-        public Obstacle[] Obstacles;
-        public IntRange ObstacleDistance = new IntRange(10, 20);
 
         private PathSegmentPool segmentPool;
-        private Dictionary<int, Pool<Obstacle>> obstaclePools;
+        private Dictionary<int, Pool<PathObstacle>> obstaclePools;
         private Dictionary<int, PathSegment> usedSegments;
-        private Dictionary<int, Obstacle> usedObstacles;
+        private Dictionary<int, PathObstacle> usedObstacles;
 
         private List<int> invisibleIndices;
-        private IEnumerator<Obstacle> obstacleChain;
+        private IEnumerator<PathObstacle> obstacleChain;
 
         protected void Awake() {
             segmentPool = gameObject.AddComponent<PathSegmentPool>();
-            segmentPool.Initialize(Segment, PoolSize);
+            segmentPool.Initialize(Segment, SegmentPoolSize);
 
-            obstaclePools = new Dictionary<int, Pool<Obstacle>>();
+            obstaclePools = new Dictionary<int, Pool<PathObstacle>>();
             foreach (var obstacle in Obstacles) {
                 var pool = gameObject.AddComponent<ObstaclePool>();
                 pool.Initialize(obstacle, 10);
@@ -36,7 +37,7 @@ namespace TempleRun.Assets.Scripts.Game.PathGenerator {
             }
 
             usedSegments = new Dictionary<int, PathSegment>();
-            usedObstacles = new Dictionary<Int32, Obstacle>();
+            usedObstacles = new Dictionary<Int32, PathObstacle>();
             invisibleIndices = new List<int>(Mathf.RoundToInt(CameraWidth/Segment.Width));
             obstacleChain = GetNextObstacle();
         }
@@ -59,7 +60,7 @@ namespace TempleRun.Assets.Scripts.Game.PathGenerator {
                 usedSegments.Remove(index);
                 segmentPool.Unspawn(usedSegment);
 
-                Obstacle usedObstacle = null;
+                PathObstacle usedObstacle = null;
                 if (usedObstacles.TryGetValue(index, out usedObstacle)) {
                     usedObstacles.Remove(index);
                     UnspawnObstacle(usedObstacle);
@@ -85,7 +86,7 @@ namespace TempleRun.Assets.Scripts.Game.PathGenerator {
             }
         }
 
-        private Obstacle SpawnNextObstacle() {
+        private PathObstacle SpawnNextObstacle() {
             var prefab = obstacleChain.Current;
             obstacleChain.MoveNext();
             if (prefab == null) return null;
@@ -95,17 +96,17 @@ namespace TempleRun.Assets.Scripts.Game.PathGenerator {
             }
         }
 
-        private void UnspawnObstacle(Obstacle obstacle) {
+        private void UnspawnObstacle(PathObstacle obstacle) {
             var pool = obstaclePools[obstacle.Id];
             pool.Unspawn(obstacle);
         }
 
-        private IEnumerator<Obstacle> GetNextObstacle() {
-            var random = new WeightedRandom<Obstacle>(Obstacles, x => x.Probability);
+        private IEnumerator<PathObstacle> GetNextObstacle() {
+            var random = new WeightedRandom<PathObstacle>(Obstacles, x => x.Probability);
 
             int index = 0;
             while (true) {
-                Obstacle obstacle = random.GetRandom();
+                PathObstacle obstacle = random.GetRandom();
                 yield return obstacle;
                 ++index;
 

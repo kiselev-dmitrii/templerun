@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TempleRun.Assets.Scripts.Utils {
+namespace TempleRun.Utils {
     public class AutoRotate : MonoBehaviour {
         public float Angle = 60;
         public Vector3 Axis = new Vector3(0, 1, 0);

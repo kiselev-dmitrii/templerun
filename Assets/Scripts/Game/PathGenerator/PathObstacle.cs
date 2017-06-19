@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-namespace TempleRun.Assets.Scripts.Game.PathGenerator {
-    public class Obstacle : MonoBehaviour {
+namespace TempleRun.Game.PathGenerator {
+    public class PathObstacle : MonoBehaviour {
         public int Id;
         public float Probability;
     }

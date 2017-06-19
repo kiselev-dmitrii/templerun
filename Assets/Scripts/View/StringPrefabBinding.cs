@@ -1,9 +1,9 @@
 ﻿using System;
 using EZData;
-using TempleRun.Assets.Scripts.Utils;
+using TempleRun.Utils;
 using UnityEngine;
 
-namespace TempleRun.Assets.Scripts.View {
+namespace TempleRun.View {
     public class StringPrefabBinding : Binding {
         public String Format = "{0}";
         private Property<String> property;

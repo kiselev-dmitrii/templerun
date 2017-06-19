@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TempleRun.Assets.Scripts.Utils {
+namespace TempleRun.Utils {
     public static class TransformUtils {
         public static void DestroyChildren(this Transform transform) {
             int count = transform.childCount;

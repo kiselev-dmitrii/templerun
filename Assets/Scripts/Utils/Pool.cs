@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TempleRun.Assets.Scripts.Utils {
-    public class Pool<T> : MonoBehaviour where T : MonoBehaviour {
+namespace TempleRun.Utils {
+    public class Pool<T> : MonoBehaviour where T : Component {
         private Stack<T> freeObjects;
 
         public void Initialize(T prefab, int size) {

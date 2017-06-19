@@ -1,7 +1,7 @@
 ﻿using System;
 using EZData;
 
-namespace TempleRun.Assets.Scripts.Model {
+namespace TempleRun.Model {
     public class HeroData : EZData.Context {
         public int Index { get; private set; }
 

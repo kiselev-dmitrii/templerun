@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TempleRun.Assets.Scripts.Game.PathGenerator {
+namespace TempleRun.Game.PathGenerator {
     public class PathSegment : MonoBehaviour {
         public float Width;
     }

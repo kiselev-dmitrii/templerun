@@ -2,7 +2,7 @@
 using EZData;
 using UnityEngine.UI;
 
-namespace TempleRun.Assets.Scripts.View {
+namespace TempleRun.View {
     public class StringTextBinding : Binding {
         public String Format = "{0}";
         private Property<String> property;
