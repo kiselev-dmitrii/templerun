@@ -7,6 +7,7 @@ namespace TempleRun.Game {
     public class TileBackground : MonoBehaviour {
         public Sprite Tile;
         public float Scale;
+        public Color Color = Color.white;
         public int PoolSize;
         public Camera Camera;
         public float CameraWidth;
@@ -47,7 +48,7 @@ namespace TempleRun.Game {
                     var tile = SpawnTile();
                     tile.transform.localPosition = new Vector3(tileWidth * i, 0, 0);
                     tile.transform.localEulerAngles = Vector3.zero;
-                    tile.transform.localScale = new Vector3(40, 40, 40);
+                    tile.transform.localScale = new Vector3(Scale, Scale, Scale);
                     usedTiles.Add(i, tile);
                 }
             }
@@ -62,6 +63,7 @@ namespace TempleRun.Game {
                 var go = new GameObject(sprite.name);
                 var sr = go.AddComponent<SpriteRenderer>();
                 sr.sprite = sprite;
+                sr.color = Color;
 
                 go.transform.parent = transform;
                 go.transform.localPosition = Vector3.zero;
