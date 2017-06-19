@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TempleRun.Utils {
+namespace TempleRun.Assets.Scripts.Utils {
     [Serializable]
     public class IntRange {
         public int Min;

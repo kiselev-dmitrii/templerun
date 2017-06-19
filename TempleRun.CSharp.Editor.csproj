@@ -5,17 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F130C982-2275-A4FD-6C40-FCF8D29AB4EC}</ProjectGuid>
+    <ProjectGuid>{1B6463BB-C387-8299-2698-4207328E8032}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
     <RootNamespace>TempleRun</RootNamespace>
@@ -53,11 +52,26 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>Library\UnityAssemblies\UnityEngine.TestRunner.dll</HintPath>
@@ -65,56 +79,57 @@
     <Reference Include="nunit.framework">
       <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEditor.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>Library\UnityAssemblies\UnityEditor.VR.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Assets\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Messaging">
+      <HintPath>Assets\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Messaging.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Packages\NData\BaseBinding.cs" />
-    <Compile Include="Assets\Packages\NData\Binding.cs" />
-    <Compile Include="Assets\Packages\NData\BooleanBinding.cs" />
-    <Compile Include="Assets\Packages\NData\CommandBinding.cs" />
-    <Compile Include="Assets\Packages\NData\Core\Collection.cs" />
-    <Compile Include="Assets\Packages\NData\Core\Command.cs" />
-    <Compile Include="Assets\Packages\NData\Core\Context.cs" />
-    <Compile Include="Assets\Packages\NData\Core\Property.cs" />
-    <Compile Include="Assets\Packages\NData\Core\ReadonlyProperty.cs" />
-    <Compile Include="Assets\Packages\NData\Core\VariableContext.cs" />
-    <Compile Include="Assets\Packages\NData\DataContext.cs" />
-    <Compile Include="Assets\Packages\NData\ItemDataContext.cs" />
-    <Compile Include="Assets\Packages\NData\MasterPath.cs" />
-    <Compile Include="Assets\Packages\NData\MultiBinding.cs" />
-    <Compile Include="Assets\Packages\NData\RootContext.cs" />
-    <Compile Include="Assets\Packages\NData\Utils\Evaluator.cs" />
-    <Compile Include="Assets\Packages\NData\Utils\ReflectionUtils.cs" />
-    <Compile Include="Assets\Packages\NData\Utils\Utils.cs" />
-    <Compile Include="Assets\Scripts\Game\GameController.cs" />
-    <Compile Include="Assets\Scripts\Game\PathGenerator\PathGenerator.cs" />
-    <Compile Include="Assets\Scripts\Game\PathGenerator\PathObstacle.cs" />
-    <Compile Include="Assets\Scripts\Game\PathGenerator\PathSegment.cs" />
-    <Compile Include="Assets\Scripts\Launcher.cs" />
-    <Compile Include="Assets\Scripts\Model\ApplicationModel.cs" />
-    <Compile Include="Assets\Scripts\Model\HeroData.cs" />
-    <Compile Include="Assets\Scripts\Model\UserData.cs" />
-    <Compile Include="Assets\Scripts\Utils\AutoRotate.cs" />
-    <Compile Include="Assets\Scripts\Utils\IntRange.cs" />
-    <Compile Include="Assets\Scripts\Utils\Pool.cs" />
-    <Compile Include="Assets\Scripts\Utils\TransformUtils.cs" />
-    <Compile Include="Assets\Scripts\Utils\WeightedRandom.cs" />
-    <Compile Include="Assets\Scripts\View\BoolActiveBinding.cs" />
-    <Compile Include="Assets\Scripts\View\ClickBinding.cs" />
-    <Compile Include="Assets\Scripts\ViewModel\MainScreen.cs" />
-    <Compile Include="Assets\Scripts\View\StringPrefabBinding.cs" />
-    <Compile Include="Assets\Scripts\View\StringTextBinding.cs" />
+    <ProjectReference Include="TempleRun.CSharp.csproj">
+      <Project>{F130C982-2275-A4FD-6C40-FCF8D29AB4EC}</Project>
+      <Name>TempleRun.CSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Packages\NData\Editor\BooleanBindingInspector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
