@@ -1,18 +1,11 @@
 ﻿using EZData;
 using TempleRun.Utils;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace TempleRun.View {
     public class GridBinding : Binding {
-        public RectTransform Template;
-        
-        private GridLayoutGroup grid;
+        public RectTransform Template;        
         private Collection collection;
-
-        public override void Awake() {
-            grid = GetComponent<GridLayoutGroup>();
-        }
 
         protected override void Bind() {
             var context = GetContext(Path);
@@ -38,7 +31,7 @@ namespace TempleRun.View {
 
         protected void OnItemInsert(int position, Context item) {
             var widget = Instantiate(Template);
-            widget.transform.parent = transform;
+            widget.transform.SetParent(transform, false);
             widget.transform.localScale = Vector3.one;
             widget.transform.localPosition = Vector3.zero;
             widget.name = position.ToString();

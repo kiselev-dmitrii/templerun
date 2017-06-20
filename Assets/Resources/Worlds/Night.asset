@@ -13,7 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Dark night
   Icon: {fileID: 21300000, guid: 3617fcb8ec92b704a85e6c6b42310b7c, type: 3}
-  Obstacles: []
-  FarBackground: {fileID: 0}
-  NearBackground: {fileID: 0}
-  Gravity: {x: 0, y: -9.8, z: 0}
+  World: {fileID: 114752642859092720, guid: 1ff8f48fbee069946bbeada08ed9e082, type: 2}

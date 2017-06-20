@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using EZData;
-using TempleRun.Game;
+using TempleRun.Main;
 using UnityEngine;
 
 namespace TempleRun.ViewModel {
@@ -11,7 +11,7 @@ namespace TempleRun.ViewModel {
     }
 
     public class WorldItem : EZData.Context {
-        public WorldDef Def { get; private set; }
+        public WorldConfig Def { get; private set; }
 
         #region Property Name
         private readonly Property<String> _privateNameProperty = new Property<String>();
@@ -42,7 +42,7 @@ namespace TempleRun.ViewModel {
 
         private readonly Action<WorldItem> onClick;
 
-        public WorldItem(WorldDef def, Action<WorldItem> onClick) {
+        public WorldItem(WorldConfig def, Action<WorldItem> onClick) {
             Def = def;
             Name = def.Name;
             Icon = def.Icon;
@@ -57,7 +57,7 @@ namespace TempleRun.ViewModel {
     }
 
     public class HeroItem : Context {
-        public HeroDef Def { get; private set; }
+        public HeroPrefab Def { get; private set; }
 
         #region Property Name
         private readonly Property<String> _privateNameProperty = new Property<String>();
@@ -77,7 +77,7 @@ namespace TempleRun.ViewModel {
         }
         #endregion
 
-        public HeroItem(HeroDef def) {
+        public HeroItem(HeroPrefab def) {
             Def = def;
             Name = def.Name;
             Prefab = def.gameObject;
@@ -140,10 +140,12 @@ namespace TempleRun.ViewModel {
 
         public const String HeroDirectory = "Heroes";
         public const String WorldDirectory = "Worlds";
+        private readonly GameController gameController;
 
         public MainScreen() {
-            HeroDef[] heroes = Resources.LoadAll<GameObject>(HeroDirectory).Select(x => x.GetComponent<HeroDef>()).ToArray();
-            WorldDef[] worlds = Resources.LoadAll<WorldDef>(WorldDirectory);
+            gameController = GameController.Instance;
+            HeroPrefab[] heroes = Resources.LoadAll<GameObject>(HeroDirectory).Select(x => x.GetComponent<HeroPrefab>()).ToArray();
+            WorldConfig[] worlds = Resources.LoadAll<WorldConfig>(WorldDirectory);
 
             Heroes.SetItems(heroes.Select(x => new HeroItem(x)));
             Worlds.SetItems(worlds.Select(x => new WorldItem(x, OnWorldItemClick)));
@@ -154,6 +156,7 @@ namespace TempleRun.ViewModel {
         public void SelectHero(int index) {
             selectedHeroIdx = index;
             SelectedHero = Heroes[selectedHeroIdx];
+            gameController.SetHero(SelectedHero.Def);
         }
 
         public void SelectWorld(WorldItem item) {
@@ -163,6 +166,7 @@ namespace TempleRun.ViewModel {
             SelectedWorld = item;
             if (SelectedWorld != null) {
                 SelectedWorld.IsSelected = true;
+                gameController.SetWorld(SelectedWorld.Def);
             }
         }
 
@@ -188,7 +192,7 @@ namespace TempleRun.ViewModel {
         }
 
         public void OnRunGameButtonClick() {
-            
+            gameController.StartGame();
         }
 
         public void OnWorldItemClick(WorldItem item) {

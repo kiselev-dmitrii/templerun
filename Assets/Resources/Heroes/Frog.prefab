@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4730474086935820}
   - component: {fileID: 33195170031257716}
   - component: {fileID: 23844461990476146}
-  - component: {fileID: 143218607098190514}
+  - component: {fileID: 143600552122291460}
+  - component: {fileID: 114375071883956114}
   - component: {fileID: 114777447776679350}
   m_Layer: 0
   m_Name: Frog
@@ -82,6 +83,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1461766389054808}
   m_Mesh: {fileID: 4300000, guid: eeae0cb7b8ffe2c42943f00fc2859e4d, type: 3}
+--- !u!114 &114375071883956114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461766389054808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3153246f5265b4da923634ea656614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LinearAcceleration: {x: 0.3, y: 0, z: 0}
 --- !u!114 &114777447776679350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,9 +109,8 @@ MonoBehaviour:
   Name: Fun frog
   MaxVelocity: 80
   JumpVelocity: {x: 0, y: 30, z: 0}
-  AccelerationPolicy: {fileID: 11400000, guid: c18b8da3d1806f54cafea89a24390e57, type: 2}
-  Controller: {fileID: 0}
---- !u!143 &143218607098190514
+  Controller: {fileID: 143600552122291460}
+--- !u!143 &143600552122291460
 CharacterController:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

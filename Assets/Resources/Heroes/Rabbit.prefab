@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4092314576319492}
   - component: {fileID: 33265149107367478}
   - component: {fileID: 23274308810884526}
-  - component: {fileID: 143085447732766888}
+  - component: {fileID: 143034720326375300}
+  - component: {fileID: 114501845221528150}
   - component: {fileID: 114702165370548224}
   m_Layer: 0
   m_Name: Rabbit
@@ -82,6 +83,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1867373800150578}
   m_Mesh: {fileID: 4300000, guid: 71694c1849bcbb946b2ff5d9e705ee6c, type: 3}
+--- !u!114 &114501845221528150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867373800150578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3153246f5265b4da923634ea656614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LinearAcceleration: {x: 0.6, y: 0, z: 0}
 --- !u!114 &114702165370548224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,9 +109,8 @@ MonoBehaviour:
   Name: Crazy rabbit
   MaxVelocity: 130
   JumpVelocity: {x: 0, y: 25, z: 0}
-  AccelerationPolicy: {fileID: 11400000, guid: c18b8da3d1806f54cafea89a24390e57, type: 2}
-  Controller: {fileID: 0}
---- !u!143 &143085447732766888
+  Controller: {fileID: 143034720326375300}
+--- !u!143 &143034720326375300
 CharacterController:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
