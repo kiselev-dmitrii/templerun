@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TempleRun.Assets.Scripts.Main;
 using TempleRun.View;
+using TempleRun.ViewModel;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -47,13 +48,25 @@ namespace TempleRun.Main {
             game.Hero.gameObject.AddComponent<HeroCollisionDetector>();
         }
 
-        public IEnumerator OnObstacleCollided() {
+        public void FinishGame() {
             Assert.IsTrue(game != null, "Game not runned");
             game.Hero.Die();
             game.Stop();
+        }
 
+        public void DestroyGame() {
+            MainUI.gameObject.SetActive(true);
+            GameUI.gameObject.SetActive(false);
+            game.Dispose();
+            game = null;
+        }
+
+        public IEnumerator OnObstacleCollided() {
+            FinishGame();
             yield return new WaitForSeconds(1.0f);
-
+            
+            var gameOverWindow = new GameOverWindow();
+            gameOverWindow.Activate();
         }
     }
 }

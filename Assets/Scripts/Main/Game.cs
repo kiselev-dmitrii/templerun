@@ -26,7 +26,6 @@ namespace TempleRun.Main {
 
         public void Dispose() {
             GameObject.DestroyImmediate(World.gameObject);
-            GameObject.DestroyImmediate(Hero.gameObject);
         }
     }
 }

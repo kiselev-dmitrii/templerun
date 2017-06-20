@@ -119,6 +119,8 @@
     <Compile Include="Assets\Scripts\Utils\Pool.cs" />
     <Compile Include="Assets\Scripts\Utils\TransformUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\WeightedRandom.cs" />
+    <Compile Include="Assets\Scripts\Utils\Window.cs" />
+    <Compile Include="Assets\Scripts\ViewModel\GameOverWindow.cs" />
     <Compile Include="Assets\Scripts\View\BoolActiveBinding.cs" />
     <Compile Include="Assets\Scripts\View\ClickBinding.cs" />
     <Compile Include="Assets\Scripts\View\GridBinding.cs" />
