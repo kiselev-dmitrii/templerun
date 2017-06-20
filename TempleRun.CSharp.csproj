@@ -97,12 +97,14 @@
     <Compile Include="Assets\Packages\NData\Utils\Evaluator.cs" />
     <Compile Include="Assets\Packages\NData\Utils\ReflectionUtils.cs" />
     <Compile Include="Assets\Packages\NData\Utils\Utils.cs" />
+    <Compile Include="Assets\Scripts\Launcher.cs" />
     <Compile Include="Assets\Scripts\Main\Acceleration\AccelerationPolicy.cs" />
-    <Compile Include="Assets\Scripts\Main\Acceleration\QuadraticAccelerationPolicy.cs" />
     <Compile Include="Assets\Scripts\Main\Acceleration\LinearAccelerationPolicy.cs" />
+    <Compile Include="Assets\Scripts\Main\Acceleration\QuadraticAccelerationPolicy.cs" />
     <Compile Include="Assets\Scripts\Main\Game.cs" />
     <Compile Include="Assets\Scripts\Main\GameController.cs" />
     <Compile Include="Assets\Scripts\Main\Hero.cs" />
+    <Compile Include="Assets\Scripts\Main\HeroCollisionDetector.cs" />
     <Compile Include="Assets\Scripts\Main\HeroPrefab.cs" />
     <Compile Include="Assets\Scripts\Main\KeyboardHeroController.cs" />
     <Compile Include="Assets\Scripts\Main\PathGenerator\PathGenerator.cs" />
@@ -111,7 +113,6 @@
     <Compile Include="Assets\Scripts\Main\TileBackground.cs" />
     <Compile Include="Assets\Scripts\Main\World.cs" />
     <Compile Include="Assets\Scripts\Main\WorldConfig.cs" />
-    <Compile Include="Assets\Scripts\Launcher.cs" />
     <Compile Include="Assets\Scripts\Utils\AutoRotate.cs" />
     <Compile Include="Assets\Scripts\Utils\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Utils\IntRange.cs" />
@@ -125,8 +126,8 @@
     <Compile Include="Assets\Scripts\View\PrefabBinding.cs" />
     <Compile Include="Assets\Scripts\View\SpriteBinding.cs" />
     <Compile Include="Assets\Scripts\View\TextBinding.cs" />
+    <Compile Include="Assets\Scripts\View\VelocityIndicator.cs" />
     <Compile Include="Assets\Scripts\ViewModel\MainScreen.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

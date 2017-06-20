@@ -21,6 +21,7 @@ namespace TempleRun.Main {
 
         public void Stop() {
             World.Camera.Target = null;
+            Hero.Stop();
         }
 
         public void Dispose() {

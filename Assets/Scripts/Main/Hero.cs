@@ -1,4 +1,5 @@
-﻿using TempleRun.Main.Acceleration;
+﻿using TempleRun.Assets.Scripts.Main;
+using TempleRun.Main.Acceleration;
 using UnityEngine;
 
 namespace TempleRun.Main {
@@ -6,6 +7,7 @@ namespace TempleRun.Main {
         private HeroPrefab def;
         private CharacterController controller;
         private AccelerationPolicy accelerationPolicy;
+        private Animator animator;
         private Vector3 velocity;
         private World world;
 
@@ -16,6 +18,7 @@ namespace TempleRun.Main {
             def = hero;
             controller = hero.Controller;
             accelerationPolicy = hero.gameObject.GetComponent<AccelerationPolicy>();
+            animator = hero.gameObject.GetComponent<Animator>();
             velocity = Vector3.zero;
             
             this.world = world;
@@ -23,14 +26,41 @@ namespace TempleRun.Main {
 
         public void Run() {
             isRunning = true;
+            animator.SetBool("IsRunning", true);
         }
 
         public void Stop() {
             isRunning = false;
+            velocity.x = 0;
+            animator.SetBool("IsRunning", false);
         }
 
         public void Jump() {
+            if (!controller.isGrounded) return;
             isJumping = true;
+            animator.SetBool("IsRunning", false);
+        }
+
+        public void SkyJump() {
+            if (controller.isGrounded) Jump();
+            else velocity = def.JumpVelocity;
+        }
+
+        public void Die() {
+            var detector = GetComponent<HeroCollisionDetector>();
+            if (detector != null) {
+                Destroy(detector);
+            }
+
+            SkyJump();
+            Stop();
+            gameObject.layer = LayerMask.NameToLayer("Ghost");
+        }
+
+        public float HorizontalSpeed {
+            get {
+                return velocity.x;
+            }
         }
 
         public void Update() {
@@ -39,6 +69,8 @@ namespace TempleRun.Main {
                 if (isJumping) {
                     velocity += def.JumpVelocity;
                     isJumping = false;
+                } else {
+                    animator.SetBool("IsRunning", isRunning);
                 }
             }
 

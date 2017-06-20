@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using TempleRun.Assets.Scripts.Main;
+using TempleRun.View;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -12,6 +14,7 @@ namespace TempleRun.Main {
     public class GameController : MonoBehaviour {
         public Canvas MainUI;
         public Canvas GameUI;
+        public VelocityIndicator Indicator;
         public static GameController Instance { get; private set; }
 
         private HeroPrefab selectedHero;
@@ -39,11 +42,16 @@ namespace TempleRun.Main {
 
             game = new Game(selectedWorld, selectedHero);
             game.Run();
+
+            Indicator.Initialize(game.Hero);
+            game.Hero.gameObject.AddComponent<HeroCollisionDetector>();
         }
 
-        public IEnumerator FinishGame() {
+        public IEnumerator OnObstacleCollided() {
             Assert.IsTrue(game != null, "Game not runned");
+            game.Hero.Die();
             game.Stop();
+
             yield return new WaitForSeconds(1.0f);
 
         }

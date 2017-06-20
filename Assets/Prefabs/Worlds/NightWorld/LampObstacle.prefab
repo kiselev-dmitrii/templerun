@@ -37,26 +37,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4162671633524436}
   - component: {fileID: 114397733149466404}
+  - component: {fileID: 65026863751468478}
   m_Layer: 0
   m_Name: LampObstacle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1820003039031050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4539967594349362}
-  - component: {fileID: 33006659751002052}
-  - component: {fileID: 23738317546794914}
-  m_Layer: 0
-  m_Name: ObstacleLamp (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +56,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4367580159350630}
-  - {fileID: 4539967594349362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82,58 +65,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1041066328431668}
-  m_LocalRotation: {x: -0.47620955, y: -0.7703318, z: -0.3232379, w: -0.27446434}
-  m_LocalPosition: {x: 0, y: 0.165, z: 0}
+  m_LocalRotation: {x: -0.6121229, y: -0.7869867, z: -0.04722606, w: -0.06105089}
+  m_LocalPosition: {x: 0, y: 0.632, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4162671633524436}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -13.686001, y: -228.76999, z: 69.675}
---- !u!4 &4539967594349362
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820003039031050}
-  m_LocalRotation: {x: -0.5563013, y: -0.7123303, z: 0.14760506, w: 0.40165558}
-  m_LocalPosition: {x: 0, y: 0.16499996, z: 0.774}
-  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
-  m_Children: []
-  m_Father: {fileID: 4162671633524436}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -13.686001, y: -130.71501, z: 69.675}
---- !u!23 &23738317546794914
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820003039031050}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: bdfea7845a448cf4ca2ba0a0f97c3403, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.023000002, y: -188.85399, z: 75.75}
 --- !u!23 &23822638438536094
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -166,13 +104,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33006659751002052
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1820003039031050}
-  m_Mesh: {fileID: 4300000, guid: b39a0ee29abf2524797d3b0881fe52f3, type: 3}
 --- !u!33 &33900204293260816
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -180,6 +111,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1041066328431668}
   m_Mesh: {fileID: 4300000, guid: b39a0ee29abf2524797d3b0881fe52f3, type: 3}
+--- !u!65 &65026863751468478
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1819278741682866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5440273, y: 1.531913, z: 1.4875873}
+  m_Center: {x: 0.025856972, y: 0.7461568, z: 0.06648916}
 --- !u!114 &114397733149466404
 MonoBehaviour:
   m_ObjectHideFlags: 1

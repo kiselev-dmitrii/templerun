@@ -10,7 +10,8 @@ namespace TempleRun.Utils {
             offset = transform.position - Target.position;
         }
 
-        protected void Update() {
+        protected void LateUpdate() {
+            if (Target == null) return;
             Vector3 newPosition = Target.position + offset;
             transform.position = Vector3.Lerp(transform.position, newPosition, Smooth * Time.deltaTime);
         }

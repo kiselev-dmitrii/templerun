@@ -145,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354408191606474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -18, z: 100}
+  m_LocalPosition: {x: 0, y: -48, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4832990463260610}
@@ -157,13 +157,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1984290663811790}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4, y: 3.075, z: -0.049999997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4, y: 2.13, z: -0.049999997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4817157906198028}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4489191858667008
 Transform:
   m_ObjectHideFlags: 1
@@ -348,14 +348,11 @@ MonoBehaviour:
   Segment: {fileID: 114579559585977284, guid: ae7b599c496355747aa86f6bd0977814, type: 2}
   SegmentPoolSize: 15
   Obstacles:
-  - {fileID: 114688108578006470, guid: 3eb668cb5bfabe54995f4a8c52749b71, type: 2}
-  - {fileID: 114506534928660648, guid: 06a2ac6680d9d074ca30d8b7d089ccf2, type: 2}
-  - {fileID: 114369490864985958, guid: b2df945d80415064fb8fab9d86a07ca4, type: 2}
-  - {fileID: 114397733149466404, guid: c68ff9d9fb2945d49910216ed55a9b40, type: 2}
-  - {fileID: 114564209861092098, guid: 95d7de2f5701a3341b1ac5509163ec91, type: 2}
   - {fileID: 114275544625036110, guid: d00d05020d95f704397bb39f3b1c47e4, type: 2}
-  - {fileID: 114359052727595386, guid: 2bc3ee70cd3ea7b4b91c00ece1aa9661, type: 2}
-  - {fileID: 114193953216892466, guid: 90aa8f7a23c23914a9eddd4f95261862, type: 2}
+  - {fileID: 114564209861092098, guid: 95d7de2f5701a3341b1ac5509163ec91, type: 2}
+  - {fileID: 114397733149466404, guid: c68ff9d9fb2945d49910216ed55a9b40, type: 2}
+  - {fileID: 114506534928660648, guid: 06a2ac6680d9d074ca30d8b7d089ccf2, type: 2}
+  - {fileID: 114688108578006470, guid: 3eb668cb5bfabe54995f4a8c52749b71, type: 2}
   ObstaclePoolSize: 3
   ObstacleDistance:
     Min: 10
