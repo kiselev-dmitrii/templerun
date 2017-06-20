@@ -1,12 +1,15 @@
 ﻿using System;
 using EZData;
-using TempleRun.Utils;
-using UnityEngine;
+using UnityEngine.UI;
 
 namespace TempleRun.View {
-    public class StringPrefabBinding : Binding {
-        public String Format = "{0}";
+    public class TextBinding : Binding {
         private Property<String> property;
+        private Text text;
+
+        public override void Awake() {
+            text = GetComponent<Text>();
+        }
 
         protected override void Bind() {
             var context = GetContext(Path);
@@ -25,19 +28,8 @@ namespace TempleRun.View {
         }
 
         protected override void OnChange() {
-            transform.DestroyChildren();
             if (property == null) return;
-
-            String path = property.GetValue();
-            if (String.IsNullOrEmpty(path)) return;
-
-            String formattedPath = String.Format(Format, path);
-            GameObject prefab = Resources.Load<GameObject>(formattedPath);
-            var go = Instantiate(prefab);
-            go.transform.parent = transform;
-            go.transform.localPosition = Vector3.zero;
-            go.transform.localScale = Vector3.one;
-            go.transform.localRotation = Quaternion.identity;
+            text.text = property.GetValue();
         }
     }
 }

@@ -131,8 +131,5 @@
   <ItemGroup>
     <Compile Include="Assets\Packages\NData\Editor\BooleanBindingInspector.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\Shaders\TileBackground.shader" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

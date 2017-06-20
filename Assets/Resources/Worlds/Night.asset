@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48665d0594390674983a8e311d2a4be6, type: 3}
-  m_Name: Day
+  m_Name: Night
   m_EditorClassIdentifier: 
-  Name: Sunny day
-  Icon: {fileID: 21300000, guid: 59a3cc645485a0843bd26c450a660f2a, type: 3}
+  Name: Dark night
+  Icon: {fileID: 21300000, guid: 3617fcb8ec92b704a85e6c6b42310b7c, type: 3}
   Obstacles: []
   FarBackground: {fileID: 0}
   NearBackground: {fileID: 0}
