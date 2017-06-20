@@ -11,7 +11,12 @@ namespace TempleRun.Main {
             World = GameObject.Instantiate(worldConfig.World);
             Hero = World.SpawnHero(heroPrefab);
 
+#if UNITY_EDITOR
             Hero.gameObject.AddComponent<KeyboardHeroController>();
+#else
+            Hero.gameObject.AddComponent<TapHeroController>();
+#endif
+
             World.Camera.Target = Hero.transform;
         }
 
