@@ -46,7 +46,7 @@ namespace TempleRun.Main {
             game.Run();
 
             mainScreen.Destroy();
-            gameScreen = new GameScreenWindow(game.Stats);
+            gameScreen = new GameScreenWindow(game);
             gameScreen.Activate();
         }
 

@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 224323092673917100}
   - component: {fileID: 222767063725151624}
   - component: {fileID: 114835036573032908}
+  - component: {fileID: 114049078499641458}
   m_Layer: 5
   m_Name: Velocity
   m_TagString: Untagged
@@ -167,6 +168,22 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Score: 1200'
+--- !u!114 &114049078499641458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1742606923912074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eedabb133005d86408a58f773f839d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Stats.Velocity
+  MinValue: 0
+  MaxValue: 1
+  MinPath: 
+  MaxPath: MaxVelocity
 --- !u!114 &114173406075812206
 MonoBehaviour:
   m_ObjectHideFlags: 1

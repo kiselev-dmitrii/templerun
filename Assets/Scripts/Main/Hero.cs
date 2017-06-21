@@ -5,7 +5,7 @@ using UnityEngine;
 namespace TempleRun.Main {
     [RequireComponent(typeof(HeroPrefab), typeof(AccelerationPolicy), typeof(CharacterController))]
     public class Hero : MonoBehaviour {
-        private HeroPrefab def;
+        public HeroPrefab Def { get; private set; }
         private CharacterController controller;
         private AccelerationPolicy accelerationPolicy;
         private HeroCollisionDetector collisionDetector;
@@ -17,7 +17,7 @@ namespace TempleRun.Main {
         private bool isJumping;
 
         public void Initialize(World world) {
-            def = GetComponent<HeroPrefab>();
+            Def = GetComponent<HeroPrefab>();
             controller = GetComponent<CharacterController>();
             accelerationPolicy = gameObject.GetComponent<AccelerationPolicy>();
             collisionDetector = gameObject.AddComponent<HeroCollisionDetector>();
@@ -45,7 +45,7 @@ namespace TempleRun.Main {
 
         public void SkyJump() {
             if (controller.isGrounded) Jump();
-            else velocity = def.JumpVelocity;
+            else velocity = Def.JumpVelocity;
         }
 
         public void Die() {
@@ -65,7 +65,7 @@ namespace TempleRun.Main {
             if (controller.isGrounded) {
                 velocity.y = 0;
                 if (isJumping) {
-                    velocity += def.JumpVelocity;
+                    velocity += Def.JumpVelocity;
                     isJumping = false;
                 } else {
                     animator.SetBool("IsRunning", isRunning);
@@ -73,7 +73,7 @@ namespace TempleRun.Main {
             }
 
             if (isRunning) {
-                velocity = accelerationPolicy.UpdateVelocity(velocity, def);
+                velocity = accelerationPolicy.UpdateVelocity(velocity, Def);
             }
             velocity += world.Gravity * Time.deltaTime;
             controller.enabled = true;
