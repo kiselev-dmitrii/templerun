@@ -8,6 +8,5 @@ namespace TempleRun.Main {
         public String Name;
         public float MaxVelocity;
         public Vector3 JumpVelocity;
-        public CharacterController Controller;
     }
 }

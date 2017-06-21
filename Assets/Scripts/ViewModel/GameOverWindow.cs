@@ -3,15 +3,15 @@ using TempleRun.Utils;
 
 namespace TempleRun.ViewModel {
     public class GameOverWindow : Window {
-        private readonly GameController gameController;
+        private readonly ApplicationController applicationController;
 
-        public GameOverWindow() : base("UI/GameOverWindow") {
-            gameController = GameController.Instance;
+        public GameOverWindow(ApplicationController applicationController) : base("UI/GameOverWindow") {
+            this.applicationController = applicationController;
         }
 
         #region Handlers
         public void OnBackToMenuButtonClick() {
-            gameController.DestroyGame();
+            applicationController.DestroyGame();
             Destroy();
         }
         #endregion

@@ -7,17 +7,16 @@ using UnityEngine;
 
 namespace TempleRun.Assets.Scripts.Main {
     public class HeroCollisionDetector : MonoBehaviour {
-        private GameController gameController;
+        private ApplicationController applicationController;
 
         private void Awake() {
-            gameController = GameController.Instance;
+            applicationController = ApplicationController.Instance;
         }
 
         #region Handlers
-        public void OnTriggerEnter(Collider collider) {
-            if (collider.tag == "Obstacle") {
-                Debug.Log("Obstacle");
-                gameController.StartCoroutine(gameController.OnObstacleCollided());
+        public void OnTriggerEnter(Collider col) {
+            if (col.tag == "Obstacle") {
+                applicationController.FinishGame();
             }
         }
         #endregion

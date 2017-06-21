@@ -3,10 +3,12 @@ using TempleRun.Main.Acceleration;
 using UnityEngine;
 
 namespace TempleRun.Main {
+    [RequireComponent(typeof(HeroPrefab), typeof(AccelerationPolicy), typeof(CharacterController))]
     public class Hero : MonoBehaviour {
         private HeroPrefab def;
         private CharacterController controller;
         private AccelerationPolicy accelerationPolicy;
+        private HeroCollisionDetector collisionDetector;
         private Animator animator;
         private Vector3 velocity;
         private World world;
@@ -14,13 +16,13 @@ namespace TempleRun.Main {
         private bool isRunning;
         private bool isJumping;
 
-        public void Initialize(HeroPrefab hero, World world) {
-            def = hero;
-            controller = hero.Controller;
-            accelerationPolicy = hero.gameObject.GetComponent<AccelerationPolicy>();
-            animator = hero.gameObject.GetComponent<Animator>();
+        public void Initialize(World world) {
+            def = GetComponent<HeroPrefab>();
+            controller = GetComponent<CharacterController>();
+            accelerationPolicy = gameObject.GetComponent<AccelerationPolicy>();
+            collisionDetector = gameObject.AddComponent<HeroCollisionDetector>();
+            animator = gameObject.GetComponent<Animator>();
             velocity = Vector3.zero;
-            
             this.world = world;
         }
 
@@ -47,11 +49,7 @@ namespace TempleRun.Main {
         }
 
         public void Die() {
-            var detector = GetComponent<HeroCollisionDetector>();
-            if (detector != null) {
-                Destroy(detector);
-            }
-
+            Destroy(collisionDetector);
             SkyJump();
             Stop();
             gameObject.layer = LayerMask.NameToLayer("Ghost");

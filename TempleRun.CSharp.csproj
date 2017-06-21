@@ -97,12 +97,12 @@
     <Compile Include="Assets\Packages\NData\Utils\Evaluator.cs" />
     <Compile Include="Assets\Packages\NData\Utils\ReflectionUtils.cs" />
     <Compile Include="Assets\Packages\NData\Utils\Utils.cs" />
-    <Compile Include="Assets\Scripts\Launcher.cs" />
     <Compile Include="Assets\Scripts\Main\Acceleration\AccelerationPolicy.cs" />
     <Compile Include="Assets\Scripts\Main\Acceleration\LinearAccelerationPolicy.cs" />
     <Compile Include="Assets\Scripts\Main\Acceleration\QuadraticAccelerationPolicy.cs" />
     <Compile Include="Assets\Scripts\Main\Game.cs" />
-    <Compile Include="Assets\Scripts\Main\GameController.cs" />
+    <Compile Include="Assets\Scripts\Main\ApplicationController.cs" />
+    <Compile Include="Assets\Scripts\Main\GameStats.cs" />
     <Compile Include="Assets\Scripts\Main\Hero.cs" />
     <Compile Include="Assets\Scripts\Main\HeroCollisionDetector.cs" />
     <Compile Include="Assets\Scripts\Main\HeroPrefab.cs" />
@@ -114,23 +114,32 @@
     <Compile Include="Assets\Scripts\Main\TileBackground.cs" />
     <Compile Include="Assets\Scripts\Main\World.cs" />
     <Compile Include="Assets\Scripts\Main\WorldConfig.cs" />
+    <Compile Include="Assets\Scripts\Utils\AutoExpandGridLayoutGroup.cs" />
     <Compile Include="Assets\Scripts\Utils\AutoRotate.cs" />
     <Compile Include="Assets\Scripts\Utils\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Utils\IntRange.cs" />
     <Compile Include="Assets\Scripts\Utils\Pool.cs" />
+    <Compile Include="Assets\Scripts\Utils\Popup.cs" />
     <Compile Include="Assets\Scripts\Utils\TransformUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\WeightedRandom.cs" />
     <Compile Include="Assets\Scripts\Utils\Window.cs" />
+    <Compile Include="Assets\Scripts\ViewModel\GameScreenWindow.cs" />
+    <Compile Include="Assets\Scripts\ViewModel\MainScreen\ChooseHeroPopup.cs" />
+    <Compile Include="Assets\Scripts\ViewModel\MainScreen\ChooseWorldPopup.cs" />
+    <Compile Include="Assets\Scripts\View\BoolColorBinding.cs" />
     <Compile Include="Assets\Scripts\View\BoolActiveBinding.cs" />
     <Compile Include="Assets\Scripts\View\ClickBinding.cs" />
+    <Compile Include="Assets\Scripts\View\FloatTextBinding.cs" />
     <Compile Include="Assets\Scripts\View\GridBinding.cs" />
     <Compile Include="Assets\Scripts\View\InteractableBinding.cs" />
+    <Compile Include="Assets\Scripts\View\IntTextBinding.cs" />
     <Compile Include="Assets\Scripts\View\PrefabBinding.cs" />
     <Compile Include="Assets\Scripts\View\SpriteBinding.cs" />
+    <Compile Include="Assets\Scripts\View\StringTextBinding.cs" />
     <Compile Include="Assets\Scripts\View\TextBinding.cs" />
-    <Compile Include="Assets\Scripts\View\VelocityIndicator.cs" />
     <Compile Include="Assets\Scripts\ViewModel\GameOverWindow.cs" />
-    <Compile Include="Assets\Scripts\ViewModel\MainScreen.cs" />
+    <Compile Include="Assets\Scripts\ViewModel\MainScreen\MainScreenWindow.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

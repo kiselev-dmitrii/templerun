@@ -3,8 +3,9 @@ using EZData;
 using UnityEngine.UI;
 
 namespace TempleRun.View {
-    public class TextBinding : Binding {
-        private Property<String> property;
+    public class TextBinding<T> : Binding {
+        public String Format = "{0}";
+        private Property<T> property;
         private Text text;
 
         public override void Awake() {
@@ -15,7 +16,7 @@ namespace TempleRun.View {
             var context = GetContext(Path);
             if (context == null) return;
 
-            property = context.FindProperty<String>(Path, this);
+            property = context.FindProperty<T>(Path, this);
             if (property == null) return;
 
             property.OnChange += OnChange;
@@ -29,7 +30,7 @@ namespace TempleRun.View {
 
         protected override void OnChange() {
             if (property == null) return;
-            text.text = property.GetValue();
+            text.text = String.Format(Format, property.GetValue());
         }
     }
 }
