@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Strong sheep
-  MaxVelocity: 60
+  MaxVelocity: 30
   JumpVelocity: {x: 0, y: 20, z: 0}
 --- !u!114 &114846074977723200
 MonoBehaviour:

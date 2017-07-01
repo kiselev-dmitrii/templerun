@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using TempleRun.Assets.Scripts.Main;
 using UnityEngine;
 
 namespace TempleRun.Main {

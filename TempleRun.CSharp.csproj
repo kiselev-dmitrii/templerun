@@ -13,7 +13,8 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
@@ -106,6 +107,7 @@
     <Compile Include="Assets\Scripts\Main\HeroCollisionDetector.cs" />
     <Compile Include="Assets\Scripts\Main\HeroPrefab.cs" />
     <Compile Include="Assets\Scripts\Main\KeyboardHeroController.cs" />
+    <Compile Include="Assets\Scripts\Main\PathGenerator\PathItem.cs" />
     <Compile Include="Assets\Scripts\Main\PathGenerator\PathGenerator.cs" />
     <Compile Include="Assets\Scripts\Main\PathGenerator\PathObstacle.cs" />
     <Compile Include="Assets\Scripts\Main\PathGenerator\PathSegment.cs" />

@@ -1,5 +1,4 @@
-﻿using TempleRun.Assets.Scripts.Main;
-using TempleRun.Main.Acceleration;
+﻿using TempleRun.Main.Acceleration;
 using UnityEngine;
 
 namespace TempleRun.Main {

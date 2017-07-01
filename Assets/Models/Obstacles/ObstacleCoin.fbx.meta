@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dcca6006cfe61984eb9e98fdd9a6bc9d
+guid: 94989aca046b7ce4588dd1de9939dca6
 timeCreated: 1498906065
 licenseType: Free
 ModelImporter:
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Road
+    4300000: Coin
   materials:
     importMaterials: 1
     materialName: 0

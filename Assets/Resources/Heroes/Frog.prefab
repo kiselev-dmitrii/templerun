@@ -183,9 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Fun frog
-  MaxVelocity: 80
+  MaxVelocity: 20
   JumpVelocity: {x: 0, y: 30, z: 0}
-  Controller: {fileID: 143076538687729260}
 --- !u!143 &143076538687729260
 CharacterController:
   m_ObjectHideFlags: 1

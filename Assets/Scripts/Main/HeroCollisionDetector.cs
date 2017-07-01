@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TempleRun.Main;
+﻿using TempleRun.Main.PathGenerator;
 using UnityEngine;
 
-namespace TempleRun.Assets.Scripts.Main {
+namespace TempleRun.Main {
     public class HeroCollisionDetector : MonoBehaviour {
         private ApplicationController applicationController;
 
@@ -15,8 +11,15 @@ namespace TempleRun.Assets.Scripts.Main {
 
         #region Handlers
         public void OnTriggerEnter(Collider col) {
-            if (col.tag == "Obstacle") {
+            if (col.CompareTag("Obstacle")) {
                 applicationController.FinishGame();
+                return;
+            }
+
+            if (col.CompareTag("Item")) {
+                var item = col.gameObject.GetComponent<PathItem>();
+                item.Take();
+                applicationController.IncrementScore(item.Score);
             }
         }
         #endregion

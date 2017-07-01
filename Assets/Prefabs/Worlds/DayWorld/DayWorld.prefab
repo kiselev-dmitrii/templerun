@@ -385,8 +385,15 @@ MonoBehaviour:
   - {fileID: 114193953216892466, guid: 90aa8f7a23c23914a9eddd4f95261862, type: 2}
   - {fileID: 114359052727595386, guid: 2bc3ee70cd3ea7b4b91c00ece1aa9661, type: 2}
   - {fileID: 114369490864985958, guid: b2df945d80415064fb8fab9d86a07ca4, type: 2}
-  ObstaclePoolSize: 3
   ObstacleDistance:
+    Min: 10
+    Max: 20
+  Coin: {fileID: 114772935321754472, guid: 3bd6ae411e531224dbccc9da9ecb5816, type: 2}
+  CoinOffset: {x: 0, y: 4, z: 0}
+  CoinChainLength:
+    Min: 3
+    Max: 10
+  CoinGapLength:
     Min: 10
     Max: 20
   Camera: {fileID: 20964585405642016}

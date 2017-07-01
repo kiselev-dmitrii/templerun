@@ -183,9 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Crazy rabbit
-  MaxVelocity: 130
+  MaxVelocity: 25
   JumpVelocity: {x: 0, y: 25, z: 0}
-  Controller: {fileID: 143458590546397268}
 --- !u!143 &143458590546397268
 CharacterController:
   m_ObjectHideFlags: 1

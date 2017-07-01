@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
-using TempleRun.Assets.Scripts.Main;
 using TempleRun.ViewModel;
 using TempleRun.ViewModel.MainScreen;
 using UnityEngine;
@@ -48,6 +47,10 @@ namespace TempleRun.Main {
             mainScreen.Destroy();
             gameScreen = new GameScreenWindow(game);
             gameScreen.Activate();
+        }
+
+        public void IncrementScore(int score) {
+            game.Stats.Score += score;
         }
 
         public void FinishGame() {
